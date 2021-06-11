@@ -10,6 +10,7 @@ EOF
 
 # fix /usr/HD, add xhost +
 echo Issuing xhost +
+sudo -i
 cd /usr/HD
 sudo chmod 755 .
 sudo cp head-node.bash head-node.bash.bu
