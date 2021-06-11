@@ -65,3 +65,7 @@ Package checking: OpenMPI
                 Built by: root
 
 mpi4py            3.0.3      
+numpy             1.20.3
+mpi4py            3.0.3      
+numpy             1.20.3
+

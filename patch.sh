@@ -1,5 +1,7 @@
 # patch for virtual 21 image
 
+sudo head-node
+
 # upgrade numpy
 pip install --upgrade numpy
 sudo su - hd-cluster <<EOF 
@@ -9,5 +11,6 @@ EOF
 # add xhost +
 echo Issuing xhost +
 cd /usr/HD
-sudo mv head-node.bash head-node.bash.bu
+sudo cp head-node.bash head-node.bash.bu
 sudo awk 'NR==123 {print "    xhost +"} {print}' head-node.bash.bu > head-node.bash
+chmod +x head-node.bash

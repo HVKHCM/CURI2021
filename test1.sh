@@ -1,6 +1,6 @@
 # short test suite for a single node
-# first, execute
-#   git clone https://github.com/HVKHCM/CURI2021-Raspberry-Pi.git stest
+# to execute:
+# git clone https://github.com/HVKHCM/CURI2021-Raspberry-Pi.git stest; stest/test1.sh
 
 cd /home/pi/stest
 
@@ -8,3 +8,4 @@ cd /home/pi/stest
 
 ./runtest.sh && { cd .. ; rm -rf stest ; }
 
+sudo worker-node 
