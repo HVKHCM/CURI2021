@@ -21,4 +21,3 @@ pip list | grep mpi4py
 pip list | grep numpy
 sudo -u hd-cluster pip list | grep mpi4py
 sudo -u hd-cluster pip list | grep numpy
-
