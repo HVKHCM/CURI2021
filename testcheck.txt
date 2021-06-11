@@ -1,4 +1,3 @@
-Greetings from process #0 of 1
 Hello from thread #0 of 1.
 Goodbye from thread #0
 Greetings from the master, #0 (
