@@ -13,5 +13,6 @@ cd /home/pi/stest
 
 sudo worker-node 
 
-ls | diff - pi-ls.out && echo "pi home directory remains unchanged" && {
+cd ~ 
+ls | diff - stest/pi-ls.out && echo "pi home directory remains unchanged" && {
 	cd .. ; rm -rf stest ; }
