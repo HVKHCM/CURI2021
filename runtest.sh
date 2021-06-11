@@ -20,4 +20,4 @@ cd ~/stest/CSinParallel/Exemplars/mpi4py-examples/fire
 python fire_sequential_once.py 24 0.4   # should show graph
 
 #checking wifi
-ping 8.8.8.8
+ping -c 5 8.8.8.8
