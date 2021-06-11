@@ -2,9 +2,12 @@
 
 # upgrade numpy
 pip install --upgrade numpy
-sudo -u hd-cluster pip install --upgrade numpy
+sudo su - hd-cluster <<EOF 
+pip install --upgrade numpy
+EOF
 
 # add xhost +
+echo Issuing xhost +
 cd /usr/HD
 sudo mv head-node.bash head-node.bash.bu
-sudo awk 'NR==122 {print "    xhost +"} {print}' head-node.bash.bu > head-node.bash
+sudo awk 'NR==123 {print "    xhost +"} {print}' head-node.bash.bu > head-node.bash
