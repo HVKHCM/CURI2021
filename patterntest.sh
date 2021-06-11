@@ -1,31 +1,33 @@
 #!/bin/bash
 
+BASE=/home/pi/CURI2021-Raspberry-Pi/
+
 # Pthreads
 echo "Pthread Testing"
-cd /home/pi/CSinParallel/Patternlets/pthreads/07.barrier/ && make 2>> /home/pi/err.txt > /dev/null
+cd $BASE/Patternlets/pthreads/07.barrier/ && make 2>> /home/pi/err.txt > /dev/null
 ./barrier 2>> /home/pi/err.txt 1>> /home/pi/outtest.txt
 rm barrier
 
 # MPI
 echo "MPI testing"
-cd /home/pi/CSinParallel/Patternlets/MPI/01.masterWorker/ && make 2>> /home/pi/err.txt > /dev/null 
+cd $BASE/CSinParallel/Patternlets/MPI/01.masterWorker/ && make 2>> /home/pi/err.txt > /dev/null 
 mpirun -np 4 ./masterWorker 2>> /home/pi/err.txt 1>> ~/outtest.txt
 rm masterWorker
 
 #mpi4py
 echo "mpi4py testng"
-cd /home/pi/CSinParallel/Patternlets/mpi4py && python3 run.py 00spmd.py 4 2>> /home/pi/err.txt >> /home/pi/outtest.txt
+cd $BASE/CSinParallel/Patternlets/mpi4py && python3 run.py 00spmd.py 4 2>> /home/pi/err.txt >> /home/pi/outtest.txt
 
 
 #hybrid-MPI+OpenMP
 echo "hybrid testing"
-cd /home/pi/CSinParallel/Patternlets/hybrid-MPI+OpenMP/01.spmd2 && make 2>> /home/pi/err.txt > /dev/null
+cd $BASE/CSinParallel/Patternlets/hybrid-MPI+OpenMP/01.spmd2 && make 2>> /home/pi/err.txt > /dev/null
 mpirun -np 4 ./spmd2 2>> ~/err.txt 1>> /home/pi/outtest.txt
 rm spmd2
 
 #openMP
 echo "openMP testing"
-cd /home/pi/CSinParallel/Patternlets/openMP/08.reduction && make 2>> /home/pi/err.txt > /dev/null
+cd $BASE/CSinParallel/Patternlets/openMP/08.reduction && make 2>> /home/pi/err.txt > /dev/null
 ./reduction 2>> /home/pi/err.txt 1>> /home/pi/outtest.txt
 rm reduction
 
@@ -40,7 +42,7 @@ do
     echo -e "\e[1;31mFOLLOWING LINE NOT DETECTED: $line \e[0m"
     patternletWork=false
   fi
-done < /home/pi/CURI2021-Raspberry-Pi/testcheck.txt
+done < $BASE/testcheck.txt
 
 #Output if all of the Patternlets worked
 if $patternletWork 
