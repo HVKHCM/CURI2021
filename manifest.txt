@@ -58,12 +58,6 @@ Package checking:  golang
 Package: golang
 Source: golang-defaults (2:1.11~1)
 
-Package checking: OpenMPI
-                 Package: Open MPI root@raspberrypi Distribution
-                Open MPI: 4.1.1
-           Java bindings: yes
-                Built by: root
-
 mpi4py            3.0.3      
 numpy             1.20.3
 mpi4py            3.0.3      

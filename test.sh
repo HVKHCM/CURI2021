@@ -9,11 +9,13 @@ for pkg in $pkgs; do
 done
 
 #Checking extended file that was not downloaded
-echo "Package checking: OpenMPI"
-ompi_info | tail -n +1 | head -n2
-ompi_info | tail -n +1 | grep "Java bindings: " 
-ompi_info | tail -n +1 | grep "Built by: "
-echo
+# test for Java - skipping 
+#echo "Package checking: OpenMPI"
+#ompi_info | tail -n +1 | head -n2
+#ompi_info | tail -n +1 | grep "Java bindings: " 
+#ompi_info | tail -n +1 | grep "Built by: "
+#echo
+
 #Checking pip installed packages
 pip list | grep mpi4py
 pip list | grep numpy
