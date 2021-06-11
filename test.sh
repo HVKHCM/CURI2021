@@ -16,4 +16,7 @@ ompi_info | tail -n +1 | grep "Built by: "
 echo
 #Checking pip installed packages
 pip list | grep mpi4py
+pip list | grep numpy
+sudo -u hd-cluster pip list | grep mpi4py
+sudo -u hd-cluster pip list | grep numpy
 
