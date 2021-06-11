@@ -11,6 +11,6 @@ EOF
 # add xhost +
 echo Issuing xhost +
 cd /usr/HD
-sudo cp head-node.bash head-node.bash.bu
+sudo mv head-node.bash head-node.bash.bu
 sudo awk 'NR==123 {print "    xhost +"} {print}' head-node.bash.bu > head-node.bash
 sudo chmod +x head-node.bash
