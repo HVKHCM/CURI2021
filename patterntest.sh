@@ -4,7 +4,7 @@ BASE=/home/pi/CURI2021-Raspberry-Pi/
 
 # Pthreads
 echo "Pthread Testing"
-cd $BASE/Patternlets/pthreads/07.barrier/ && make 2> /home/pi/err.txt > /dev/null
+cd $BASE/CSinParallel/Patternlets/pthreads/07.barrier/ && make 2> /home/pi/err.txt > /dev/null
 ./barrier 2>> /home/pi/err.txt 1> /home/pi/outtest.txt
 rm barrier
 
