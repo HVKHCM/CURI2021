@@ -4,25 +4,25 @@ BASE=/home/pi/CURI2021-Raspberry-Pi/
 
 # Pthreads
 echo "Pthread Testing"
-cd $BASE/Patternlets/pthreads/07.barrier/ && make 2>> /home/pi/err.txt > /dev/null
-./barrier 2>> /home/pi/err.txt 1>> /home/pi/outtest.txt
+cd $BASE/Patternlets/pthreads/07.barrier/ && make 2> /home/pi/err.txt > /dev/null
+./barrier 2>> /home/pi/err.txt 1> /home/pi/outtest.txt
 rm barrier
 
 # MPI
 echo "MPI testing"
 cd $BASE/CSinParallel/Patternlets/MPI/01.masterWorker/ && make 2>> /home/pi/err.txt > /dev/null 
-mpirun -np 4 ./masterWorker 2>> /home/pi/err.txt 1>> ~/outtest.txt
+mpirun -np 4 ./masterWorker 2>> /home/pi/err.txt 1>> /home/pi/outtest.txt
 rm masterWorker
 
 #mpi4py
 echo "mpi4py testng"
-cd $BASE/CSinParallel/Patternlets/mpi4py && python3 run.py 00spmd.py 4 2>> /home/pi/err.txt >> /home/pi/outtest.txt
+cd $BASE/CSinParallel/Patternlets/mpi4py && python3 run.py 00spmd.py 4 2>> /home/pi/err.txt 1>> /home/pi/outtest.txt
 
 
 #hybrid-MPI+OpenMP
 echo "hybrid testing"
 cd $BASE/CSinParallel/Patternlets/hybrid-MPI+OpenMP/01.spmd2 && make 2>> /home/pi/err.txt > /dev/null
-mpirun -np 4 ./spmd2 2>> ~/err.txt 1>> /home/pi/outtest.txt
+mpirun -np 4 ./spmd2 2>> /home/pi/err.txt 1>> /home/pi/outtest.txt
 rm spmd2
 
 #openMP
