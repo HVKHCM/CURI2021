@@ -1,4 +1,6 @@
 #!/bin/bash
+
+cd ~/CURI2021-Raspberry-Pi
 #creating the head-node and the host file
 sudo head-node
   
@@ -18,7 +20,7 @@ cd ~
 
 #Testing Cluster on MPI/00.spmd patternlet
 echo "MPI cluster testing"
-cd ~/CSinParallel/Patternlets/MPI/00.spmd/ && make 2>> err.txt > /dev/null 
+cd ~/CSinParallel/Patternlets/MPI/00.spmd/ && make 2>> ~/err.txt > /dev/null 
 
 #Run the job
 mpirun -hostfile ~/hostfile -np 12 ./spmd 2>> ~/err.txt 1>> ~/outtest.txt
