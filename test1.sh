@@ -9,3 +9,5 @@ cd /home/pi/stest
 ./runtest.sh && { cd .. ; rm -rf stest ; }
 
 sudo worker-node 
+
+ls | diff - && echo "pi home directory remains unchanged"
