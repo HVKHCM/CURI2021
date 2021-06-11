@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd ~/CURI2021-Raspberry-Pi
+cd ~/stest
 (cd .. ; tar cf - CSinParallel) | sudo tar xf -
 
 #Create a log for output of testing
@@ -8,7 +8,7 @@ source test.sh > log.txt 2>&1
 
 #Checking the manifest
 #If nothing show up, it means it fit the manifest
-diff log.txt manifest.txt
+diff -b log.txt manifest.txt
 rm log.txt
 rm manifest.txt
 
