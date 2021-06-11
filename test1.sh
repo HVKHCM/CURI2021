@@ -10,4 +10,4 @@ cd /home/pi/stest
 
 sudo worker-node 
 
-ls | diff - && echo "pi home directory remains unchanged"
+ls | diff - pi-ls.out && echo "pi home directory remains unchanged"
