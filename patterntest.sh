@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BASE=/home/pi/CURI2021-Raspberry-Pi/
+BASE=/home/pi/stest
 
 # Pthreads
 echo "Pthread Testing"
