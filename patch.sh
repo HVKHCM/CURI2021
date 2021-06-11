@@ -8,9 +8,10 @@ sudo su - hd-cluster <<EOF
 pip install --upgrade numpy
 EOF
 
-# add xhost +
+# fix /usr/HD, add xhost +
 echo Issuing xhost +
 cd /usr/HD
+sudo chmod 755 .
 sudo mv head-node.bash head-node.bash.bu
 sudo awk 'NR==123 {print "    xhost +"} {print}' head-node.bash.bu > head-node.bash
 sudo chmod +x head-node.bash
