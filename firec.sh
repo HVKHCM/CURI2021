@@ -8,5 +8,6 @@ echo "Testing fire example with cluster"
 cd ~/CSinParallel/Exemplars/mpi4py-examples/fire/
 mpirun -np 4 -hostfile ~/hostfile python fire_mpi_simulate.py 10 0.1 20
 
-rm -rf spmd ~/hostfile ~/.openmpi/mca-params.conf ~/ctest ~/stest
+cd ~
+rm -rf CSinParallel/Patternlets/MPI/00.spmd/spmd hostfile .openmpi/mca-params.conf ctest stest
 
