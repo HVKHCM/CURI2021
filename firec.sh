@@ -6,7 +6,7 @@
 # test fire with cluster
 #soc-mpisetup -w
 cd ~/CSinParallel/Exemplars/mpi4py-examples/fire/
-mpirun -np 8 -hostfile ~/hostfile python fire_mpi_simulate.py 24 0.4 10  # should show graph
+mpirun -np 4 -hostfile ~/hostfile python fire_mpi_simulate.py 10 0.1 20
 
 cd ~
 rm -rf spmd ~/hostfile ~/.openmpi/mca-params.conf stest
