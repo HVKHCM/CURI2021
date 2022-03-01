@@ -1,6 +1,5 @@
 #!/bin/bash
 
-cd ~/stest
 (cd .. ; tar cf - CSinParallel) | sudo tar xf - || {
     echo "ERROR! couldn't duplicate CSinParallel, aborting" ; exit 1 ; }
 
